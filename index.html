@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="default-style" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="icon" href="img\favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid buscador">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" alt="Pokedex logo" id="navbar-logo" />
+        </a>
+        <a href=""> <h1>Pokedex</h1></a>
+
+        <h3 id="cantidad-pokemones-existentes">There`re ... pokemons</h3>
+        <input
+          type="text"
+          id="barra-buscar"
+          placeholder=" pokemon name or id"
+        />
+        <button id="boton-buscar">Enviar</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group"></div>
+        </div>
+
+        <div class="col-8">
+          <div class="card text-bg-secondary" id="nombre-pokemon"></div>
+
+          <div class="card-group">
+            <div class="card text-bg-secondary" id="foto-pokemon"></div>
+            <div class="card text-bg-secondary" id="tipo-habilidades-pokemon">
+              <div id="tipo-pokemon">
+                <h4><u>Type</u></h4>
+              </div>
+              <div id="habilidades-pokemon">
+                <h4><u>Ability</u></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div class="card text-bg-secondary" id="caracteristicas-pokemon">
+              <h4><u>Characteristics</u></h4>
+            </div>
+            <div class="card text-bg-secondary" id="stats-pokemon">
+              <h4><u>Stats</u></h4>
+            </div>
+          </div>
+          <div class="card text-bg-secondary" id="movimientos-pokemon">
+            <h4><u>Moves</u></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="src/index.js" type="module"></script>
+  </body>
+</html>
