@@ -34,10 +34,20 @@
     <div class="container">
       <div class="row">
         <div class="col-4">
-          <div class="list-group"></div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" id="pag-anterior" href="#">Previous</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" id="pag-siguiente" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="list-group" id="lista-pokemones"></div>
         </div>
 
-        <div class="col-8">
+        <div class="col-8" id="pokemon">
           <div class="card text-bg-secondary" id="nombre-pokemon"></div>
 
           <div class="card-group">
@@ -60,6 +70,7 @@
               <h4><u>Stats</u></h4>
             </div>
           </div>
+
           <div class="card text-bg-secondary" id="movimientos-pokemon">
             <h4><u>Moves</u></h4>
           </div>
