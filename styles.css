@@ -7,20 +7,28 @@ img {
   width: 300px;
   height: auto;
 }
+.boton-cambiar-pagina {
+  color: white;
+  background-color: #6c757d;
+}
 .card {
   margin: 2.5%;
-  transition: transform 0.2s; /* Animation */
+  transition: transform 0.2s;
   align-items: center;
 }
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 .navbar {
   background-color: white;
 }
+.pokemon-de-lista {
+  color: white;
+  background-color: #6c757d;
+}
 #barra-buscar {
-  margin-left: 50%;
+  margin-left: 70%;
 }
 #contenedor-busqueda {
   display: none;

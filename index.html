@@ -21,29 +21,42 @@
         </a>
         <h1>Pokedex</h1>
 
-        <h3 id="cantidad-pokemones-existentes">There`re ... pokemons</h3>
         <input
           type="text"
           id="barra-buscar"
           placeholder=" pokemon name or id"
         />
-        <button id="boton-buscar">Enviar</button>
+
+        <button id="boton-buscar">Search</button>
       </div>
     </nav>
 
     <div class="container">
       <div class="row">
         <div class="col-4">
-          <nav aria-label="Page navigation example">
-            <ul class="pagination">
+          <h3 id="cantidad-pokemones-existentes">There`re ... pokemons</h3>
+
+          <nav id="paginador">
+            <ul class="pagination justify-content-center">
               <li class="page-item">
-                <a class="page-link" id="pag-anterior" href="#">Previous</a>
+                <a
+                  class="page-link boton-cambiar-pagina"
+                  id="pag-anterior"
+                  href="#"
+                  >Previous</a
+                >
               </li>
               <li class="page-item">
-                <a class="page-link" id="pag-siguiente" href="#">Next</a>
+                <a
+                  class="page-link boton-cambiar-pagina"
+                  id="pag-siguiente"
+                  href="#"
+                  >Next</a
+                >
               </li>
             </ul>
           </nav>
+
           <div class="list-group" id="lista-pokemones"></div>
         </div>
 

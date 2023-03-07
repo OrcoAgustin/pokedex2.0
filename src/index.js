@@ -29,8 +29,10 @@ async function inicializar() {
 
 //pasar pags en la lista
 $("#pag-anterior").click(function () {
-  pagina = pagina - 1;
-  actualizarLista();
+  if (pagina > 0) {
+    pagina = pagina - 1;
+    actualizarLista();
+  }
 });
 
 $("#pag-siguiente").click(function () {
