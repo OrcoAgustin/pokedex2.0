@@ -1,13 +1,21 @@
-export function agregarPokemonesALista(pokemones) {
+export function agregarPokemonesALista(pokemones, pagina = 0, onClickFn) {
   $("#lista-pokemones").html("");
   Object.keys(pokemones).forEach((numero) =>
     $(".list-group").append(
-      `<a href="#" class="list-group-item pokemon-de-lista id=${[
-        Number(numero) + 1,
-      ]}">${pokemones[numero].name}</a>`
+      `<button class="list-group-item list-group-item-action pokemon-de-lista" id="${[
+        Number(numero) + 1 + pagina * 40,
+      ]}">${pokemones[numero].name}</button>`
     )
   );
+
+  //agrega event listener
+  $(".pokemon-de-lista").click(function () {
+    $(".active").removeClass("active");
+    $(this).addClass("active");
+    onClickFn();
+  });
 }
+
 export async function agregarInfoCartas(pokemon) {
   //limpia la respuesta del pokemon
   $("#pokemon")

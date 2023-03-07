@@ -5,12 +5,16 @@ import {
   exponerPokemonesTotales,
 } from "./ui.js";
 
-let page = 0;
+let pagina = 0;
+
+async function actualizarCartas() {
+  agregarInfoCartas(await obtenerPokemon($(".active").attr("id")));
+}
 
 async function actualizarLista() {
-  const { results: pokemones } = await obtenerPokemones(page);
+  const { results: pokemones } = await obtenerPokemones(pagina);
 
-  agregarPokemonesALista(pokemones);
+  agregarPokemonesALista(pokemones, pagina, actualizarCartas);
 }
 
 async function inicializar() {
@@ -18,27 +22,21 @@ async function inicializar() {
     await obtenerPokemones();
 
   exponerPokemonesTotales(pokemonesTotales);
-  agregarPokemonesALista(pokemones);
+  agregarPokemonesALista(pokemones, pagina, actualizarCartas);
 
   agregarInfoCartas(await obtenerPokemon());
 }
 
 //pasar pags en la lista
 $("#pag-anterior").click(function () {
-  page = page - 1;
+  pagina = pagina - 1;
   actualizarLista();
 });
 
 $("#pag-siguiente").click(function () {
-  page = page + 1;
+  pagina = pagina + 1;
   actualizarLista();
 });
-
-/*
-$(".list-group-item").on("click", function () {
-  alert("click");
-});
-*/
 
 $("#boton-buscar").click(async function () {
   agregarInfoCartas(await obtenerPokemon($("#barra-buscar").val()));
