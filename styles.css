@@ -4,20 +4,17 @@ body {
   text-transform: capitalize;
 }
 img {
-  width: 200px;
+  width: 250px;
   height: auto;
 }
 .card {
   margin: 2.5%;
   transition: transform 0.2s; /* Animation */
+  align-items: center;
 }
 .card:hover {
   transform: scale(1.1);
   cursor: pointer;
-}
-
-.flex {
-  display: flex;
 }
 .navbar {
   background-color: white;
